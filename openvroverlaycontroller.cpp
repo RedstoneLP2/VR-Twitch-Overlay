@@ -93,10 +93,13 @@ QString GetTrackedDeviceString( vr::IVRSystem *pHmd, vr::TrackedDeviceIndex_t un
 	}
 }
 
+void COpenVROverlayController::CheckViewAngle(){
+	
+}
+
 void COpenVROverlayController::OpenTwitchDashboard(QString Username){
 	((OverlayWidget*)m_pWidget)->openDashboard(Username);
 }
-
 void COpenVROverlayController::SetOverlayPosX(float newpos){
 	setOverlayTransform(newpos, yPos, zPos, xRot, yRot, zRot);
 }
@@ -247,9 +250,10 @@ void COpenVROverlayController::Shutdown()
 //-----------------------------------------------------------------------------
 void COpenVROverlayController::OnSceneChanged( const QList<QRectF>& )
 {
+	CheckViewAngle()
 	// skip rendering if the overlay isn't visible
     if( ( m_ulOverlayHandle == k_ulOverlayHandleInvalid ) || !vr::VROverlay() ||
-        ( !vr::VROverlay()->IsOverlayVisible( m_ulOverlayHandle ) && !vr::VROverlay()->IsOverlayVisible( m_ulOverlayThumbnailHandle ) ) )
+        ( !vr::VROverlay()->IsOverlayVisible( m_ulOverlayHandle ) ) )
         return;
 
 	m_pOpenGLContext->makeCurrent( m_pOffscreenSurface );

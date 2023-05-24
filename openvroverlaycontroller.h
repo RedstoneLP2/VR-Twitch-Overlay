@@ -65,6 +65,7 @@ protected:
 private:
 	bool ConnectToVRRuntime();
 	void DisconnectFromVRRuntime();
+	void CheckViewAngle();
 
 	vr::TrackedDevicePose_t m_rTrackedDevicePose[ vr::k_unMaxTrackedDeviceCount ];
 	QString m_strVRDriver;
