@@ -250,7 +250,7 @@ void COpenVROverlayController::Shutdown()
 //-----------------------------------------------------------------------------
 void COpenVROverlayController::OnSceneChanged( const QList<QRectF>& )
 {
-	CheckViewAngle()
+	CheckViewAngle();
 	// skip rendering if the overlay isn't visible
     if( ( m_ulOverlayHandle == k_ulOverlayHandleInvalid ) || !vr::VROverlay() ||
         ( !vr::VROverlay()->IsOverlayVisible( m_ulOverlayHandle ) ) )

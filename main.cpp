@@ -17,8 +17,6 @@ int main(int argc, char *argv[])
     
     pMainSettings->show();
 
-    
-    
     // don't show widgets that you're going display in an overlay
     //w.show();
 

@@ -3,6 +3,7 @@
 
 #include <QtWidgets/QWidget>
 #include "overlaywidget.h"
+#include "TwitchDashboard.h"
 
 namespace Ui {
 class MainSettings;
@@ -33,11 +34,15 @@ private slots:
     void on_angleSpinBoxY_valueChanged(double);
     void on_angleSpinBoxZ_valueChanged(double);
 
+    void writeSettings();
+    void readSettings();
 
 
 private:
     Ui::MainSettings *ui;
     OverlayWidget *pOverlay;
+    TwitchDashboard *pTwitchDashboard;
+    void closeEvent(QCloseEvent*);
 };
 
 #endif // MAINSETTINGS_H

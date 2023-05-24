@@ -6,6 +6,7 @@ TwitchDashboard::TwitchDashboard(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TwitchDashboard)
 {
+    //QWidget::setAttribute(Qt::WA_DeleteOnClose);
     ui->setupUi(this);
 }
 
