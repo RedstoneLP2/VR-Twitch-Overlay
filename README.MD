@@ -13,3 +13,7 @@ A "simple" Twitch Chat Overlay for SteamVR
 - (Optional) Set Position and Angle of the Overlay
 - Press "Open Twitch Dashboard" and login to Twitch
 - Press "Save Settings and Load in VR"
+
+## Known issues
+- Sometimes segfaults on exit
+- Requires "QT_QUICK_BACKEND" to be set to "software"
