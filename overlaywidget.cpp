@@ -14,6 +14,6 @@ OverlayWidget::~OverlayWidget()
 }
 
 void OverlayWidget::openDashboard(QString Username){
-    ui->webEngineView->setUrl(QUrl(QString::fromUtf8("https://dashboard.twitch.tv/popout/u/")+Username+QString::fromUtf8("/stream-manager/chat")));
-    ui->webEngineView_2->setUrl(QUrl(QString::fromUtf8("https://dashboard.twitch.tv/popout/u/")+Username+QString::fromUtf8("/stream-manager/activity-feed")));
+    ui->TwitchChat->setUrl(QUrl(QString::fromUtf8("https://dashboard.twitch.tv/popout/u/")+Username+QString::fromUtf8("/stream-manager/chat")));
+    ui->TwitchFeed->setUrl(QUrl(QString::fromUtf8("https://dashboard.twitch.tv/popout/u/")+Username+QString::fromUtf8("/stream-manager/activity-feed")));
 }

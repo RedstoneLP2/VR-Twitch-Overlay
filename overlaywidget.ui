@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>417</width>
+    <width>834</width>
     <height>892</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>VR-StreamOverlay</string>
   </property>
-  <widget class="QWebEngineView" name="webEngineView">
+  <widget class="QWebEngineView" name="TwitchChat">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -24,11 +24,11 @@
    </property>
    <property name="url">
     <url>
-     <string>about:blank</string>
+     <string>https://dashboard.twitch.tv/popout/u/redstonelp2/stream-manager/chat?uuid=e89c6ad1adea672e95d55ee049c9c19a</string>
     </url>
    </property>
   </widget>
-  <widget class="QWebEngineView" name="webEngineView_2">
+  <widget class="QWebEngineView" name="TwitchFeed">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -40,6 +40,21 @@
    <property name="url">
     <url>
      <string>about:blank</string>
+    </url>
+   </property>
+  </widget>
+  <widget class="QWebEngineView" name="YoutubeChat">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>0</y>
+     <width>421</width>
+     <height>891</height>
+    </rect>
+   </property>
+   <property name="url">
+    <url>
+     <string>https://studio.youtube.com/live_chat?is_popout=1&amp;v=lXm6fU_Zx6M</string>
     </url>
    </property>
   </widget>
