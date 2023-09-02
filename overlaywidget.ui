@@ -24,7 +24,7 @@
    </property>
    <property name="url">
     <url>
-     <string>https://dashboard.twitch.tv/popout/u/redstonelp2/stream-manager/chat?uuid=e89c6ad1adea672e95d55ee049c9c19a</string>
+     <string>about:blank</string>
     </url>
    </property>
   </widget>
@@ -54,7 +54,7 @@
    </property>
    <property name="url">
     <url>
-     <string>https://studio.youtube.com/live_chat?is_popout=1&amp;v=lXm6fU_Zx6M</string>
+     <string>about:blank</string>
     </url>
    </property>
   </widget>

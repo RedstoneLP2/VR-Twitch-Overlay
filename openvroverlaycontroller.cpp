@@ -97,8 +97,8 @@ void COpenVROverlayController::CheckViewAngle(){
 	
 }
 
-void COpenVROverlayController::OpenTwitchDashboard(QString Username){
-	((OverlayWidget*)m_pWidget)->openDashboard(Username);
+void COpenVROverlayController::OpenTwitchDashboard(QString Username, QString YoutubeChatLink){
+	((OverlayWidget*)m_pWidget)->openDashboard(Username, YoutubeChatLink);
 }
 void COpenVROverlayController::SetOverlayPosX(float newpos){
 	setOverlayTransform(newpos, yPos, zPos, xRot, yRot, zRot);

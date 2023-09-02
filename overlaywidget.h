@@ -14,7 +14,7 @@ class OverlayWidget : public QWidget
 public:
     explicit OverlayWidget(QWidget *parent = 0);
     ~OverlayWidget();
-    void openDashboard(QString);
+    void openDashboard(QString, QString YoutubeLink = QString(""));
 
 private slots:
 

@@ -44,7 +44,7 @@ public:
 	void SetOverlayRotX(float);
 	void SetOverlayRotY(float);
 	void SetOverlayRotZ(float);
-	void OpenTwitchDashboard(QString);
+	void OpenTwitchDashboard(QString,QString);
 
 	bool BHMDAvailable();
     vr::IVRSystem *GetVRSystem();

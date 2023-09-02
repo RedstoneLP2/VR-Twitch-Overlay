@@ -22,7 +22,7 @@ MainSettings::~MainSettings()
 }
 
 void MainSettings::on_StartBtn_clicked(){
-    COpenVROverlayController::SharedInstance()->OpenTwitchDashboard(ui->UsernameEdit->text());
+    COpenVROverlayController::SharedInstance()->OpenTwitchDashboard(ui->UsernameEdit->text(), ui->YoutubeURLEdit->text());
     writeSettings();
 }
 
@@ -89,12 +89,13 @@ void MainSettings::writeSettings()
 
     settings.beginGroup("OverlaySettings");
     settings.setValue("twitchUsername", ui->UsernameEdit->text());
-    settings.setValue("XRotation", ui->angleSpinBoxX->value());
-    settings.setValue("YRotation", ui->angleSpinBoxY->value());
-    settings.setValue("ZRotation", ui->angleSpinBoxZ->value());
-    settings.setValue("XPosition", ui->PositionSpinBoxX->value());
-    settings.setValue("YPosition", ui->PositionSpinBoxY->value());
-    settings.setValue("ZPosition", ui->PositionSpinBoxZ->value());
+    settings.setValue("YoutubeChatLink", ui->YoutubeURLEdit->text());
+    settings.setValue("XRotation", ui->angleSliderX->value());
+    settings.setValue("YRotation", ui->angleSliderY->value());
+    settings.setValue("ZRotation", ui->angleSliderZ->value());
+    settings.setValue("XPosition", ui->PositionSliderX->value());
+    settings.setValue("YPosition", ui->PositionSliderY->value());
+    settings.setValue("ZPosition", ui->PositionSliderZ->value());
     settings.endGroup();
 }
 
@@ -105,6 +106,7 @@ void MainSettings::readSettings()
 
     settings.beginGroup("OverlaySettings");
     ui->UsernameEdit->setText(settings.value("twitchUsername").toString());
+    ui->YoutubeURLEdit->setText(settings.value("YoutubeChatLink").toString());
     on_angleSliderX_valueChanged(settings.value("XRotation").toInt());
     on_angleSliderY_valueChanged(settings.value("YRotation").toInt());
     on_angleSliderZ_valueChanged(settings.value("ZRotation").toInt());
